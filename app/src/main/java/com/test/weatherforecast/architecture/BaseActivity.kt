@@ -27,7 +27,6 @@ abstract class BaseActivity<VM : BaseViewModel<*>> : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         lifecycle.addObserver(viewModel)
-        viewModel.screenName = javaClass.name
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

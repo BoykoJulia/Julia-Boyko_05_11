@@ -1,4 +1,4 @@
-package sun.com.coronarate.di.modules
+package com.test.weatherforecast.di.components
 
 import dagger.Module
 import dagger.Provides
@@ -19,7 +19,6 @@ class RetrofitModule {
     ): Retrofit = Retrofit.Builder()
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
         // .baseUrl(BuildConfig.B)
-        //  .addConverterFactory(ToStringConverterFactory())
         .addConverterFactory(gsonConverterFactory)
         .client(okHttpClient)
         .build()

@@ -11,9 +11,6 @@ abstract class BaseViewModel<T : BaseRepository>(application: Application) :
     AndroidViewModel(application), LifecycleObserver {
 
     protected val compositeDisposable = CompositeDisposable()
-    val ldProgressDialog = MutableLiveData<Boolean>()
-
-    var screenName: String? = null
 
     init {
         inject()

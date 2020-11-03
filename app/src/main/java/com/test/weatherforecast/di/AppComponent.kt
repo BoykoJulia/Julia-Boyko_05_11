@@ -5,7 +5,7 @@ import com.test.weatherforecast.di.components.GsonModule
 import com.test.weatherforecast.di.components.NetworkModule
 import com.test.weatherforecast.di.components.OkHttpModule
 import dagger.Component
-import sun.com.coronarate.di.modules.RetrofitModule
+import com.test.weatherforecast.di.components.RetrofitModule
 import javax.inject.Singleton
 
 @Singleton
