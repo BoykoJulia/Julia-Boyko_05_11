@@ -21,3 +21,5 @@
 app/libs/
 app/src/androidTest/java/uk/co/elpaso/ExampleInstrumentedTest.kt
 app/src/test/java/uk/co/elpaso/ExampleUnitTest.kt
+/.idea/
+/gradle/
