@@ -65,4 +65,8 @@ dependencies {
     //OkHttpClient
     implementation 'com.squareup.okhttp3:okhttp:3.14.7'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.12.1'
+
+    //Google maps
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.libraries.places:places:2.4.0'
 }

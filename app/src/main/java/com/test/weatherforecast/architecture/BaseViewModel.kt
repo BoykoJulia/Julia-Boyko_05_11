@@ -2,8 +2,10 @@ package com.test.weatherforecast.architecture
 
 import android.app.Application
 import android.content.Intent
+import android.os.Bundle
 import androidx.annotation.StringRes
 import androidx.lifecycle.*
+import com.test.weatherforecast.utils.live_data.SingleLiveData
 import io.reactivex.disposables.CompositeDisposable
 import javax.inject.Inject
 
@@ -11,6 +13,12 @@ abstract class BaseViewModel<T : BaseRepository>(application: Application) :
     AndroidViewModel(application), LifecycleObserver {
 
     protected val compositeDisposable = CompositeDisposable()
+    val ldAction = SingleLiveData<Pair<String, Bundle?>>()
+
+    companion object {
+        const val ACTION_SHOW_TOAST = "show_toast"
+        const val PARAM_TOAST_TEXT = "param_toast_text"
+    }
 
     init {
         inject()

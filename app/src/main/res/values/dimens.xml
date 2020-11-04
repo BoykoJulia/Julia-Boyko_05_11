@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    Activity map -->
+    <dimen name="activity_map_place_autocomplete_height">46dp</dimen>
+    <dimen name="activity_map_place_autocomplete_margin_top">36dp</dimen>
+    <dimen name="activity_map_place_autocomplete_margin_horizontal">32dp</dimen>
+    <dimen name="activity_map_button_weather_forecast_height">60dp</dimen>
+    <dimen name="activity_map_button_weather_forecast_margin_horizontal">32dp</dimen>
+    <dimen name="activity_map_button_weather_forecast_margin_bottom">48dp</dimen>
+    <dimen name="activity_map_button_weather_forecast_elevation">5dp</dimen>
+    <dimen name="activity_map_marker_size">36dp</dimen>
+    <dimen name="activity_map_bg_search_radius">20dp</dimen>
+    <dimen name="activity_map_button_weather_forecast_radius">20dp</dimen>
+
+</resources>

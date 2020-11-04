@@ -6,6 +6,8 @@ import com.test.weatherforecast.di.components.NetworkModule
 import com.test.weatherforecast.di.components.OkHttpModule
 import dagger.Component
 import com.test.weatherforecast.di.components.RetrofitModule
+import com.test.weatherforecast.ui.map.MapViewModel
+import com.test.weatherforecast.ui.weather_forecast.WeatherForecastViewModel
 import javax.inject.Singleton
 
 @Singleton
@@ -19,6 +21,8 @@ import javax.inject.Singleton
 )
 interface AppComponent {
 
+    fun inject(viewModel: MapViewModel)
+    fun inject(viewModel: WeatherForecastViewModel)
 
     @Component.Builder
     interface Builder {
