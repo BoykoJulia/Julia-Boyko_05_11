@@ -7,10 +7,6 @@ import io.reactivex.Single
 class NetworkUtils {
 
     companion object {
-        fun getInternetSingle(context: Context?): Single<Boolean> {
-            return Single.fromCallable { isInternetAvailable(context) }
-        }
-
         fun isInternetAvailable(context: Context?): Boolean {
             if (context == null) return false
 

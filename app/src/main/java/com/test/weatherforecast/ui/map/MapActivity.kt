@@ -5,6 +5,7 @@ import android.content.pm.PackageManager
 import android.location.Location
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.google.android.gms.common.api.Status
@@ -25,6 +26,7 @@ import com.test.weatherforecast.architecture.binding.BaseBindingActivity
 import com.test.weatherforecast.databinding.ActivityMapBinding
 import com.test.weatherforecast.ui.weather_forecast.WeatherForecastActivity
 import com.test.weatherforecast.utils.extantions.setupFullScreen
+import com.test.weatherforecast.utils.extantions.setupLightStatusBar
 
 private const val LOCATION_PERMISSION_REQUEST_CODE = 111
 private const val GOOGLE_MAP_ZOOM = 10f
@@ -51,6 +53,7 @@ class MapActivity : BaseBindingActivity<MapViewModel, ActivityMapBinding>() {
         super.onCreate(savedInstanceState)
 
         setupFullScreen()
+        setupLightStatusBar()
 
         initViews()
 
@@ -129,7 +132,8 @@ class MapActivity : BaseBindingActivity<MapViewModel, ActivityMapBinding>() {
             LOCATION_PERMISSION_REQUEST_CODE -> {
                 val permissionResult = ContextCompat.checkSelfPermission(
                     this,
-                    Manifest.permission.ACCESS_FINE_LOCATION)
+                    Manifest.permission.ACCESS_FINE_LOCATION
+                )
 
                 if (permissionResult == PackageManager.PERMISSION_GRANTED) {
                     fusedLocationClient.lastLocation

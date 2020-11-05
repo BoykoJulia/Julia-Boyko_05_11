@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/DefaultToolbarStyle">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBack"
+                style="@style/ToolbarButtonBackStyle"
+                android:layout_centerVertical="true"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/ivBack"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="56dp"
+                android:textSize="24sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_centerVertical="true"
+                android:textColor="@android:color/black"
+                tools:text="Some Title"
+                android:gravity="center" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+</layout>

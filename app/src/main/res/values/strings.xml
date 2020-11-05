@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">Weather forecast</string>
+
+    <!--Map-->
     <string name="activity_map_button_weather_forecast_text">Weather forecast</string>
     <string name="activity_map_permission_denied_text">Permission Denied</string>
     <string name="map_autocomplete_search_hint">Search</string>
+
+    <!--Errors-->
+    <string name="error_default">Something went wrong</string>
+    <string name="error_no_internet_connection">No internet connection</string>
+    <string name="error_button_retry_text">Retry</string>
+    <string name="item_weather_forecast_today">Today</string>
 </resources>

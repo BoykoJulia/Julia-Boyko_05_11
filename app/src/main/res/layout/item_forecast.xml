@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivWeatherIcon"
+            android:layout_width="@dimen/item_forecast_icon_size"
+            android:layout_height="@dimen/item_forecast_icon_size"
+            android:layout_marginTop="@dimen/item_forecast_icon_margin"
+            android:layout_marginEnd="@dimen/item_forecast_icon_margin"
+            android:layout_marginBottom="@dimen/item_forecast_icon_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/weatherImageGuideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/item_forecast_day_text_margin_start"
+            android:layout_marginTop="@dimen/item_forecast_day_text_margin_top"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/item_forecast_day_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/tvWeatherDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWeatherDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_forecast_description_margin_top"
+            android:layout_marginBottom="@dimen/item_forecast_description_margin_bottom"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/item_forecast_description_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvDayText"
+            app:layout_constraintTop_toBottomOf="@+id/tvDayText"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMaxTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_forecast_max_temperature_margin_top"
+            android:layout_marginEnd="@dimen/item_forecast_max_temperature_margin_end"
+            android:maxLines="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/item_forecast_max_temperature_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/tvMinTemperature"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/weatherImageGuideline"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMinTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/item_forecast_min_temperature_margin_end"
+            android:layout_marginBottom="@dimen/item_forecast_min_temperature_margin_bottom"
+            android:maxLines="1"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/item_forecast_max_temperature_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="@id/weatherImageGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/tvMaxTemperature"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/weatherImageGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="70dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

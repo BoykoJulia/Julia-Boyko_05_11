@@ -1,5 +1,6 @@
 package com.test.weatherforecast.di.components
 
+import com.test.weatherforecast.BuildConfig
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -18,7 +19,7 @@ class RetrofitModule {
         okHttpClient: OkHttpClient
     ): Retrofit = Retrofit.Builder()
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-        // .baseUrl(BuildConfig.B)
+        .baseUrl(BuildConfig.BASE_URL)
         .addConverterFactory(gsonConverterFactory)
         .client(okHttpClient)
         .build()
